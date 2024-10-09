@@ -9,5 +9,6 @@ namespace WebApplication1.Entidades
         public bool EnCine { get; set; }
 
         public DateTime FechaEstreno { get; set;} 
+        public HashSet<Comentario>comentarios { get; set; } = new HashSet<Comentario>();
     }
 }

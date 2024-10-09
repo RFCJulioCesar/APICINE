@@ -12,17 +12,13 @@ namespace WebApplication1
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            modelBuilder.Entity<Genero>().HasKey(g => g.Id);
-            modelBuilder.Entity<Genero>().Property(g => g.Nombre).HasMaxLength(150);
+      
 
-            modelBuilder.Entity<Actor>().Property(a => a.Nombre).HasMaxLength(150);   
-            modelBuilder.Entity<Actor>().Property(a => a.FechaNacimiento).HasColumnType("date");
-            modelBuilder.Entity<Actor>().Property(a => a.Fortuna).HasPrecision(18, 2);
+          
 
-            modelBuilder.Entity<Pelicula>().Property(a => a.Titulo).HasMaxLength(150);
-            modelBuilder.Entity<Pelicula>().Property(a => a.FechaEstreno).HasColumnType("date");
+          
 
-            modelBuilder.Entity<Comentario>().Property(a => a.Contenido).HasMaxLength(500);
+            
 
         }
         protected override void ConfigureConventions(ModelConfigurationBuilder configurationBuilder)
