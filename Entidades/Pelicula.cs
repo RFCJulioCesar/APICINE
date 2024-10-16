@@ -10,5 +10,8 @@ namespace WebApplication1.Entidades
 
         public DateTime FechaEstreno { get; set;} 
         public HashSet<Comentario>comentarios { get; set; } = new HashSet<Comentario>();
+        public HashSet<Genero> generos { get; set; } = new HashSet<Genero>();
+        public List<PeliculaActor> peliculaActors { get; set; } = new List<PeliculaActor>();
+        
     }
 }

@@ -1,14 +1,11 @@
-﻿namespace WebApplication1.Entidades
+﻿namespace WebApplication1.DTOs
 {
-    public class Actor
+    public class ActorCreacionDTOs
     {
         public int Id { get; set; }
         public string Nombre { get; set; } = null!;
         public decimal Fortuna { get; set; }
         public DateTime FechaNacimiento { get; set; }
-
-        public List<PeliculaActor> peliculaActors { get; set; } = new List<PeliculaActor>();
-
 
     }
 }

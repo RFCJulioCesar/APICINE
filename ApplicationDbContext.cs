@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using System.Reflection;
 using WebApplication1.Entidades;
 
 namespace WebApplication1
@@ -12,6 +13,8 @@ namespace WebApplication1
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+
+            modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
       
 
           
@@ -29,6 +32,7 @@ namespace WebApplication1
         public DbSet<Actor> Actors => Set<Actor>();
         public DbSet<Pelicula> peliculas => Set<Pelicula>();
         public DbSet<Comentario> comentarios => Set<Comentario>();     
+        public DbSet<PeliculaActor> peliculaActors => Set<PeliculaActor>();
             
     }
 }
