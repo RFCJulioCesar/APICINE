@@ -10,22 +10,22 @@ namespace WebApplication1.Controllers
     {
         [ApiController]
         [Route("api/generos")]
-        public class GenerosController: ControllerBase
+        public class GenerosController : ControllerBase
         {
             private readonly ApplicationDbContext context;
             private readonly IMapper mapper;
 
             public GenerosController(ApplicationDbContext Context, IMapper mapper) {
 
-                
+
                 this.context = Context;
                 this.mapper = mapper;
             }
 
             [HttpPost]
-            public async Task<ActionResult>Post(GeneroCreacionDTOs generoCreacion) {
-               
-           var genero = mapper.Map<Genero>(generoCreacion);
+            public async Task<ActionResult> Post(GeneroCreacionDTOs generoCreacion) {
+
+                var genero = mapper.Map<Genero>(generoCreacion);
                 context.Add(genero);
                 await context.SaveChangesAsync();
                 return Ok();
