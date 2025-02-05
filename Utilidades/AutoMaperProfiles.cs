@@ -4,7 +4,7 @@ using WebApplication1.Entidades;
 using WebApplication1.DTOs;
 using System;
 
-public class AutoMaperProfiles
+public class AutoMaperProfiles: Profile
     {
     public AutoMaperProfiles()
     {
